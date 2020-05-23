@@ -11,6 +11,13 @@ knitr::opts_chunk$set(comment = "#",collapse = TRUE,results = "hold",
                       fig.align = "center")
 ```
 
+*Add text here.*
+
+```{r}
+library(ggplot2)
+library(cowplot)
+```
+
 Read the height, weight and age-of-death (AOD) data for different
 dog breeds. These data accompany [Jones
 et al, 2008][jones-2008].
