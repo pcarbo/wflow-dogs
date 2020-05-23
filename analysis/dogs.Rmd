@@ -41,10 +41,10 @@ b   <- coef(fit)
 Plot AOD vs. body weight
 ------------------------
 
-Plot age-of-death vs. body weight, along with the best-fit line (the
-dashed, blue line). Compare with Figure 4 from Jones *et al* (2008).
+Plot age-of-death vs. body weight, aand the best-fit line (this is the
+dashed blue line). Compare with Fig. 4 of Jones *et al* (2008).
 
-```{r}
+```{r plot-aod-vs-wt, fig.height=4, fig.width=4}
 ggplot(dogs,aes(x = weight,y = AOD)) +
   geom_point(color = "black") +
   geom_abline(intercept = b["(Intercept)"],slope = b["weight"],
