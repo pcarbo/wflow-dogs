@@ -412,16 +412,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstree0f6814c62fcc50d69e178ceff4b145e48f202660targetblank0f6814ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/wflow-dogs/tree/0f6814c62fcc50d69e178ceff4b145e48f202660" target="_blank">0f6814c</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstreed67bc165d7c5fa519d21eaf766057cc488808635targetblankd67bc16a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/wflow-dogs/tree/d67bc165d7c5fa519d21eaf766057cc488808635" target="_blank">d67bc16</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstree0f6814c62fcc50d69e178ceff4b145e48f202660targetblank0f6814ca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstreed67bc165d7c5fa519d21eaf766057cc488808635targetblankd67bc16a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/pcarbo/wflow-dogs/tree/0f6814c62fcc50d69e178ceff4b145e48f202660" target="_blank">0f6814c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/pcarbo/wflow-dogs/tree/d67bc165d7c5fa519d21eaf766057cc488808635" target="_blank">d67bc16</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -465,6 +465,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/pcarbo/wflow-dogs/blob/d67bc165d7c5fa519d21eaf766057cc488808635/analysis/dogs.Rmd" target="_blank">d67bc16</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-05-22
+</td>
+<td>
+wflow_publish(“dogs.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/pcarbo/wflow-dogs/32ed1358092b28e44fa0831c1ca8bbb8855b1d59/docs/dogs.html" target="_blank">32ed135</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-05-22
+</td>
+<td>
+Made some adjustments to the “dogs” analysis.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -557,13 +591,13 @@ b   &lt;- coef(fit)</code></pre>
 </div>
 <div id="plot-aod-vs.body-weight" class="section level2">
 <h2>Plot AOD vs. body weight</h2>
-<p>Plot age-of-death vs. body weight, along with the best-fit line (the dashed, blue line). Compare with Figure 4 from Jones <em>et al</em> (2008).</p>
+<p>Plot age-of-death vs. body weight, aand the best-fit line (this is the dashed blue line). Compare with Fig. 4 of Jones <em>et al</em> (2008).</p>
 <pre class="r"><code>ggplot(dogs,aes(x = weight,y = AOD)) +
   geom_point(color = &quot;black&quot;) +
   geom_abline(intercept = b[&quot;(Intercept)&quot;],slope = b[&quot;weight&quot;],
               color = &quot;darkorange&quot;,linetype = &quot;dashed&quot;) +
   theme_cowplot()</code></pre>
-<p><img src="figure/dogs.Rmd/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/dogs.Rmd/plot-aod-vs-wt-1.png" width="384" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
