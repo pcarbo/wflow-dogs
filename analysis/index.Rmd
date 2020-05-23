@@ -1,9 +1,8 @@
 ---
-title: "Home"
-site: workflowr::wflow_site
-output:
-  workflowr::wflow_html:
-    toc: false
+title: Dogs workflowr project
+author: Peter Carbonetto
+output: workflowr::wflow_html
 ---
 
-Welcome to my research website.
++ [Analysis of AOD vs. weight in dog breeds](dogs.html)
+
