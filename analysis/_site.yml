@@ -1,17 +1,14 @@
-name: "wflow-dogs"
+name: wflow-dogs
 output_dir: ../docs
 navbar:
-  title: "wflow-dogs"
-  left:
-  - text: Home
-    href: index.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+  title: wflow-dogs
+  right:
+    - text: source
+      href: https://github.com/pcarbo/wflow-dogs
 output:
   workflowr::wflow_html:
-    toc: yes
-    toc_float: yes
-    theme: cosmo
+    toc: no
+    theme: readable
     highlight: textmate
+    code_folding: none
+    self_contained: no
