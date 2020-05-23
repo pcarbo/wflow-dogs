@@ -412,22 +412,24 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstreed67bc165d7c5fa519d21eaf766057cc488808635targetblankd67bc16a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/wflow-dogs/tree/d67bc165d7c5fa519d21eaf766057cc488808635" target="_blank">d67bc16</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstreefb4902b26dde1b5f63083317aab1ec16dee29cd3targetblankfb4902ba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/wflow-dogs/tree/fb4902b26dde1b5f63083317aab1ec16dee29cd3" target="_blank">fb4902b</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstreed67bc165d7c5fa519d21eaf766057cc488808635targetblankd67bc16a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstreefb4902b26dde1b5f63083317aab1ec16dee29cd3targetblankfb4902ba" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/pcarbo/wflow-dogs/tree/d67bc165d7c5fa519d21eaf766057cc488808635" target="_blank">d67bc16</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/pcarbo/wflow-dogs/tree/fb4902b26dde1b5f63083317aab1ec16dee29cd3" target="_blank">fb4902b</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-working directory clean
+Unstaged changes:
+    Modified:   README.md
+
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -465,6 +467,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/pcarbo/wflow-dogs/blob/fb4902b26dde1b5f63083317aab1ec16dee29cd3/analysis/dogs.Rmd" target="_blank">fb4902b</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-05-22
+</td>
+<td>
+wflow_publish(“dogs.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/pcarbo/wflow-dogs/cdc0b7fb7ff4f2a38afc1e91a27a104ad07eec68/docs/dogs.html" target="_blank">cdc0b7f</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-05-22
+</td>
+<td>
+Fixed the plot in the “dogs” analysis.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -574,13 +610,14 @@ Fixed workflowr settings and added dogs.Rmd.
 </div>
 </div>
 </div>
+<p>It is well-known that small dog breeds live longer than larger-sized breeds. Here we verify this using data from the paper, “Single-nucleotide- polymorphism-based association mapping of dog stereotypes,” Jones et al, <em>Genetics</em>, 2008.</p>
 <p><em>Add introductory text here.</em></p>
-<p><em>Add text here.</em></p>
+<p>The ggplot2 and cowplot packages are used to create the scatterplot below.</p>
 <pre class="r"><code>library(ggplot2)
 library(cowplot)</code></pre>
 <div id="import-data" class="section level2">
 <h2>Import data</h2>
-<p>Read the height, weight and age-of-death (AOD) data for different dog breeds. These data accompany <a href="https://doi.org/10.1534/genetics.108.087866">Jones <em>et al</em>, 2008</a>.</p>
+<p>Read the height, weight and age-of-death (AOD) data for different dog breeds. These data accompany <a href="https://doi.org/10.1534/genetics.108.087866">Jones et al, 2008</a>.</p>
 <pre class="r"><code>dogs &lt;- read.csv(&quot;../data/dogs.csv&quot;,stringsAsFactors = FALSE)</code></pre>
 </div>
 <div id="find-best-fit-line" class="section level2">
@@ -591,13 +628,50 @@ b   &lt;- coef(fit)</code></pre>
 </div>
 <div id="plot-aod-vs.body-weight" class="section level2">
 <h2>Plot AOD vs. body weight</h2>
-<p>Plot age-of-death vs. body weight, aand the best-fit line (this is the dashed blue line). Compare with Fig. 4 of Jones <em>et al</em> (2008).</p>
+<p>Plot age-of-death vs. body weight, and the best-fit line (this is the dashed blue line). Compare with Fig. 4 of Jones et al (2008).</p>
 <pre class="r"><code>ggplot(dogs,aes(x = weight,y = AOD)) +
   geom_point(color = &quot;black&quot;) +
   geom_abline(intercept = b[&quot;(Intercept)&quot;],slope = b[&quot;weight&quot;],
               color = &quot;darkorange&quot;,linetype = &quot;dashed&quot;) +
   theme_cowplot()</code></pre>
 <p><img src="figure/dogs.Rmd/plot-aod-vs-wt-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-aod-vs-wt-1">
+Past versions of plot-aod-vs-wt-1.png
+</button>
+</p>
+<div id="fig-plot-aod-vs-wt-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/pcarbo/wflow-dogs/blob/cdc0b7fb7ff4f2a38afc1e91a27a104ad07eec68/docs/figure/dogs.Rmd/plot-aod-vs-wt-1.png" target="_blank">cdc0b7f</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-05-22
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
