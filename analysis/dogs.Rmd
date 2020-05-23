@@ -9,8 +9,6 @@ breeds. Here we verify this using data from the paper, "Single-nucleotide-
 polymorphism-based association mapping of dog stereotypes," Jones
 et al, *Genetics*, 2008.
 
-*Add introductory text here.*
-
 ```{r knitr-opts, include=FALSE}
 knitr::opts_chunk$set(comment = "#",collapse = TRUE,results = "hold",
                       fig.align = "center")
