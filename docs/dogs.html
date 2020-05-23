@@ -14,6 +14,7 @@
 
 <title>Analyze AOD vs. weight in dog breeds</title>
 
+<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -31,6 +32,8 @@ div.section {
   padding-top: 12px;
 }
 </style>
+
+
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -321,13 +324,13 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-05-22
+<strong>Last updated:</strong> 2020-05-23
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
-<strong>Knit directory:</strong> <code>wflow-dogs/analysis/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+<strong>Knit directory:</strong> <code>jovyan/analysis/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
@@ -369,7 +372,7 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 </div>
 <div id="strongSeedstrongcodesetseed1code" class="panel-collapse collapse">
 <div class="panel-body">
-<p>The command <code>set.seed(1)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+<p>The command <code>set.seed(1)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
 </div>
 </div>
 </div>
@@ -412,22 +415,34 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstree08eed5a343c4b4ac9985731afa8e7b54ca377075targetblank08eed5aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/wflow-dogs/tree/08eed5a343c4b4ac9985731afa8e7b54ca377075" target="_blank">08eed5a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstree50661b29a2c9fa8c8d623a9a3858d1a9447464dctargetblank50661b2a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/pcarbo/wflow-dogs/tree/50661b29a2c9fa8c8d623a9a3858d1a9447464dc" target="_blank">50661b2</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstree08eed5a343c4b4ac9985731afa8e7b54ca377075targetblank08eed5aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcompcarbowflowdogstree50661b29a2c9fa8c8d623a9a3858d1a9447464dctargetblank50661b2a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/pcarbo/wflow-dogs/tree/08eed5a343c4b4ac9985731afa8e7b54ca377075" target="_blank">08eed5a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/pcarbo/wflow-dogs/tree/50661b29a2c9fa8c8d623a9a3858d1a9447464dc" target="_blank">50661b2</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-working directory clean
+Ignored files:
+    Ignored:    .cache/
+
+Untracked files:
+    Untracked:  .bash_logout
+    Untracked:  .bashrc
+    Untracked:  .config/
+    Untracked:  .gitconfig
+    Untracked:  .local/
+    Untracked:  .profile
+    Untracked:  .rstudio/
+    Untracked:  .subversion/
+
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -470,13 +485,47 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/pcarbo/wflow-dogs/blob/50661b29a2c9fa8c8d623a9a3858d1a9447464dc/analysis/dogs.Rmd" target="_blank">50661b2</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-05-23
+</td>
+<td>
+wflow_publish(“dogs.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/pcarbo/wflow-dogs/0f1a6ed840bff2417245ed0eac1e865e16c7840e/docs/dogs.html" target="_blank">0f1a6ed</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2020-05-23
+</td>
+<td>
+Deleted sentence in “dogs” analysis.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/pcarbo/wflow-dogs/blob/08eed5a343c4b4ac9985731afa8e7b54ca377075/analysis/dogs.Rmd" target="_blank">08eed5a</a>
 </td>
 <td>
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 wflow_publish(“dogs.Rmd”)
@@ -493,7 +542,7 @@ html
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 Added text to “dogs” analysis.
@@ -510,7 +559,7 @@ Rmd
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 wflow_publish(“dogs.Rmd”)
@@ -527,7 +576,7 @@ html
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 Fixed the plot in the “dogs” analysis.
@@ -544,7 +593,7 @@ Rmd
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 wflow_publish(“dogs.Rmd”)
@@ -561,7 +610,7 @@ html
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 Made some adjustments to the “dogs” analysis.
@@ -578,7 +627,7 @@ Rmd
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 wflow_publish(“dogs.Rmd”)
@@ -595,7 +644,7 @@ html
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 Generated “dogs” webpage for first time.
@@ -612,7 +661,7 @@ Rmd
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 wflow_publish(“dogs.Rmd”)
@@ -629,7 +678,7 @@ Rmd
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 <td>
 Fixed workflowr settings and added dogs.Rmd.
@@ -657,11 +706,11 @@ library(cowplot)</code></pre>
 <pre class="r"><code>fit &lt;- lm(AOD ~ weight,dogs)
 b   &lt;- coef(fit)</code></pre>
 </div>
-<div id="plot-aod-vs.body-weight" class="section level2">
+<div id="plot-aod-vs.-body-weight" class="section level2">
 <h2>Plot AOD vs. body weight</h2>
 <p>Plot age-of-death vs. body weight, and the best-fit line (this is the dashed blue line). Compare with Fig. 4 of Jones et al (2008).</p>
 <pre class="r"><code>ggplot(dogs,aes(x = weight,y = AOD)) +
-  geom_point(color = &quot;black&quot;) +
+  geom_point(color = &quot;dodgerblue&quot;) +
   geom_abline(intercept = b[&quot;(Intercept)&quot;],slope = b[&quot;weight&quot;],
               color = &quot;darkorange&quot;,linetype = &quot;dashed&quot;) +
   theme_cowplot()</code></pre>
@@ -696,7 +745,7 @@ Date
 Peter Carbonetto
 </td>
 <td>
-2020-05-22
+2020-05-23
 </td>
 </tr>
 </tbody>
@@ -711,16 +760,21 @@ Peter Carbonetto
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()
-# R version 3.6.2 (2019-12-12)
-# Platform: x86_64-apple-darwin15.6.0 (64-bit)
-# Running under: macOS Catalina 10.15.4
+# R version 3.6.3 (2020-02-29)
+# Platform: x86_64-pc-linux-gnu (64-bit)
+# Running under: Ubuntu 18.04.4 LTS
 # 
 # Matrix products: default
-# BLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib
-# LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
+# BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.7.1
+# LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.7.1
 # 
 # locale:
-# [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+#  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+#  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+#  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+#  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+#  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+# [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 # 
 # attached base packages:
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -729,17 +783,16 @@ Peter Carbonetto
 # [1] cowplot_1.0.0 ggplot2_3.3.0
 # 
 # loaded via a namespace (and not attached):
-#  [1] Rcpp_1.0.3       compiler_3.6.2   pillar_1.4.3     later_1.0.0     
-#  [5] git2r_0.26.1     workflowr_1.6.2  tools_3.6.2      digest_0.6.23   
-#  [9] evaluate_0.14    lifecycle_0.1.0  tibble_2.1.3     gtable_0.3.0    
-# [13] pkgconfig_2.0.3  rlang_0.4.5      yaml_2.2.0       xfun_0.11       
-# [17] withr_2.1.2      stringr_1.4.0    dplyr_0.8.3      knitr_1.26      
-# [21] fs_1.3.1         rprojroot_1.3-2  grid_3.6.2       tidyselect_0.2.5
-# [25] glue_1.3.1       R6_2.4.1         rmarkdown_2.0    farver_2.0.1    
-# [29] purrr_0.3.3      magrittr_1.5     whisker_0.4      backports_1.1.5 
-# [33] scales_1.1.0     promises_1.1.0   htmltools_0.4.0  assertthat_0.2.1
-# [37] colorspace_1.4-1 httpuv_1.5.2     labeling_0.3     stringi_1.4.3   
-# [41] munsell_0.5.0    crayon_1.3.4</code></pre>
+#  [1] Rcpp_1.0.4.6     knitr_1.28       whisker_0.3-2    magrittr_1.5    
+#  [5] workflowr_1.6.2  munsell_0.5.0    colorspace_1.4-1 R6_2.2.2        
+#  [9] rlang_0.4.6      stringr_1.4.0    tools_3.6.3      grid_3.6.3      
+# [13] gtable_0.3.0     xfun_0.14        withr_2.2.0      git2r_0.27.1    
+# [17] ellipsis_0.3.1   htmltools_0.4.0  yaml_2.2.1       digest_0.6.25   
+# [21] rprojroot_1.3-2  tibble_3.0.1     lifecycle_0.2.0  crayon_1.3.4    
+# [25] farver_2.0.3     later_1.0.0      vctrs_0.3.0      promises_1.1.0  
+# [29] fs_1.4.1         glue_1.4.1       evaluate_0.14    rmarkdown_2.1   
+# [33] labeling_0.3     stringi_1.4.6    pillar_1.4.4     compiler_3.6.3  
+# [37] scales_1.1.1     backports_1.1.7  httpuv_1.5.2     pkgconfig_2.0.3</code></pre>
 </div>
 </div>
 
@@ -755,6 +808,8 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
+
 
 
 
