@@ -4,6 +4,11 @@ author: Peter Carbonetto
 output: workflowr::wflow_html
 ---
 
+It is well-known that small dog breeds live longer than larger-sized 
+breeds. Here we verify this using data from the paper, "Single-nucleotide-
+polymorphism-based association mapping of dog stereotypes," Jones
+et al, *Genetics*, 2008.
+
 *Add introductory text here.*
 
 ```{r knitr-opts, include=FALSE}
@@ -11,7 +16,8 @@ knitr::opts_chunk$set(comment = "#",collapse = TRUE,results = "hold",
                       fig.align = "center")
 ```
 
-*Add text here.*
+The ggplot2 and cowplot packages are used to create the scatterplot
+below.
 
 ```{r load-pkgs, message=FALSE, warning=FALSE}
 library(ggplot2)
@@ -22,7 +28,7 @@ Import data
 -----------
 
 Read the height, weight and age-of-death (AOD) data for different
-dog breeds. These data accompany [Jones *et al*, 2008][jones-2008].
+dog breeds. These data accompany [Jones et al, 2008][jones-2008].
 
 ```{r read-data}
 dogs <- read.csv("../data/dogs.csv",stringsAsFactors = FALSE)
@@ -41,8 +47,8 @@ b   <- coef(fit)
 Plot AOD vs. body weight
 ------------------------
 
-Plot age-of-death vs. body weight, aand the best-fit line (this is the
-dashed blue line). Compare with Fig. 4 of Jones *et al* (2008).
+Plot age-of-death vs. body weight, and the best-fit line (this is the
+dashed blue line). Compare with Fig. 4 of Jones et al (2008).
 
 ```{r plot-aod-vs-wt, fig.height=4, fig.width=4}
 ggplot(dogs,aes(x = weight,y = AOD)) +
