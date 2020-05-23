@@ -13,28 +13,36 @@ knitr::opts_chunk$set(comment = "#",collapse = TRUE,results = "hold",
 
 *Add text here.*
 
-```{r}
+```{r load-pkgs, message=FALSE, warning=FALSE}
 library(ggplot2)
 library(cowplot)
 ```
 
-Read the height, weight and age-of-death (AOD) data for different
-dog breeds. These data accompany [Jones
-et al, 2008][jones-2008].
+Import data
+-----------
 
-```{r}
+Read the height, weight and age-of-death (AOD) data for different
+dog breeds. These data accompany [Jones *et al*, 2008][jones-2008].
+
+```{r read-data}
 dogs <- read.csv("../data/dogs.csv",stringsAsFactors = FALSE)
 ```
 
-Fit a line for AOD vs. body weight (in pounds).
+Find "best-fit" line
+--------------------
 
-```{r}
+Find the line that best predicts AOD given body weight (in pounds).
+
+```{r fit-lm}
 fit <- lm(AOD ~ weight,dogs)
 b   <- coef(fit)
 ```
 
-Plot AOD vs. body weight, along with the best-fit line (dashed, blue
-line). Compare with Figure 4 from Jones et al (2008).
+Plot AOD vs. body weight
+------------------------
+
+Plot age-of-death vs. body weight, along with the best-fit line (the
+dashed, blue line). Compare with Figure 4 from Jones *et al* (2008).
 
 ```{r}
 ggplot(dogs,aes(x = weight,y = AOD)) +
@@ -44,4 +52,4 @@ ggplot(dogs,aes(x = weight,y = AOD)) +
   theme_cowplot()
 ```
 
-[jones-2008]: doi.org/10.1534/genetics.108.087866
+[jones-2008]: https://doi.org/10.1534/genetics.108.087866
